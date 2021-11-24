@@ -12,8 +12,3 @@
       image: alpine
       commands:
         - lscpu
-      when:
-        branch:
-          - master
-        event:
-          - push
