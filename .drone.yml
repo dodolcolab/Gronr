@@ -11,7 +11,7 @@
     - name: test
       image: alpine
       commands:
-        - date
+        - lscpu
       when:
         branch:
           - master
