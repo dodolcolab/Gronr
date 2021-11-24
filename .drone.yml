@@ -1,13 +1,14 @@
 ---
-################
-# Build & Test #
-################
+  kind: pipeline
+  type: docker
+  name: terraform
+  
+  platform:
+    arch: amd64
+    os: linux
 
-kind: pipeline
-name: run_tests
-
-steps:
-  - name: engine_test
-    image: python:3.7.2
-    commands:
-    - lscpu
+  steps:
+    - name: test
+      image: alpine
+      commands:
+        - lscpu
